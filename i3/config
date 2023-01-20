@@ -389,7 +389,7 @@ bindsym $mod+shift+x exec ~/rofi-nord/powermenu.sh
 bindsym $mod+shift+a exec ~/rofi-nord/volume.sh
 
 #Move tab
-bindsym $mod+Tab workspace next
+bindsym Mod1+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # Use Gui

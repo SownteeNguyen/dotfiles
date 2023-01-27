@@ -11,7 +11,15 @@ catppuccin.setup({
         dark = "mocha",
     },
     transparent_background = false,
+    show_end_of_buffer = false,
     term_colors = true,
+    dim_inactive = {
+        enabled = false,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
     styles = {
         comments = {},
         conditionals = {},
@@ -40,11 +48,9 @@ catppuccin.setup({
         -- telescope = true,
         -- lsp_trouble = true,
         -- which_key = true,
-
-        -- Special Integrations
         indent_blankline = {
             enabled = true,
-            colored_indent_levels = true,
+            colored_indent_levels = false,
         },
         native_lsp = {
             enabled = true,
@@ -60,6 +66,10 @@ catppuccin.setup({
             --     warnings = { "underline" },
             --     information = { "underline" },
             -- },
+        },
+        navic = {
+            enabled = false,
+            custom_bg = "NONE",
         },
     },
     color_overrides = {

@@ -1,0 +1,107 @@
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css");
+.theme-dark { 
+ /* Header Color  */
+--header-primary: var(--text-normal); 
+--header-secondary: var(--text-muted); 
+/*  Text Color
+--text-normal: #b1bae6; 
+--text-muted: #565f89; 
+--interactive-normal: #5f647e; 
+--interactive-hover: #a2a6c2; 
+--interactive-active: #b5bad1; 
+--interactive-muted: #55576b; 
+/* Background Color */
+--background-primary: #1e1e2e; 
+--background-secondary: #1e1e2e; 
+--background-secondary-alt: #1e1e2e; 
+--background-tertiary: #1e1e2e; 
+--background-tertiary-alt: var(--background-secondary-alt); 
+--background-accent: #434461; 
+--background-floating: #161620; 
+--background-modifier-hover: #212331c0; 
+--background-modifier-active: #282a3680; 
+--background-modifier-selected: #24263171; 
+--background-modifier-accent: #1e1e29; 
+--background-mentioned: #252836; 
+--border-mentioned: #474c64; 
+--background-mentioned-hover: #2f3344; 
+--accent-color: #7aa2f7; 
+/* Folder Color */
+--folder-color: #202332d0; 
+--folder-color-light: #2f3342d0; 
+/* Scrollbars Color */
+--scrollbar-thin-thumb: transparent; 
+--scrollbar-thin-track: transparent; 
+--scrollbar-auto-thumb: #2b2b46af; 
+--scrollbar-auto-thumb-hover: #27273d85;
+--scrollba-auto-track: transparent; 
+--scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-auto-thumb); 
+--scrollbar-auto-scrollbar-color-track: var(--scrollbar-auto-track); 
+/* Chat Box Color */
+--channeltextarea-background: var(--background-secondary); 
+--channeltextarea-background-hover: var(--background-tertiary); 
+/* Square avatar addons */
+--avatar-roundess: 5px; 
+/* Mac Titlebar addons
+--close-button-color: #e92a2ade; 
+--maximize-button-color: #f7bc1bde; 
+--minimize-button-color: #12db33de; */
+}
+
+  /*Minifiedmemberlist*/
+  /*
+  :root {
+    --hover-animation-speed: 0.1s;
+    --seperator-color: var(--background-accent);
+  }
+
+  .membersWrap-3NUR2t {
+    min-width: unset;
+    width: 60px;
+    justify-content: right;
+    z-index: 2;
+    min-height: 100%;
+  }
+
+  .members-3WRCEx {
+    transition: transform var(--hover-animation-speed);
+  }
+
+  .membersWrap-3NUR2t:hover .members-3WRCEx {
+    transform: translateX(-190px);
+  }
+
+  .membersWrap-3NUR2t .membersGroup-2eiWxl::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    border-radius: 50px;
+    background: unset;
+    background-color: var(--seperator-color);
+    position: absolute;
+    left: -36px;
+    top: 29px;
+    margin-left: 0px;
+  }
+
+  .membersWrap-3NUR2t .members-3WRCEx .member-3-YXUe {
+    background-color: unset;
+    margin-left: 0px;
+    transition: margin-left var(--hover-animation-speed);
+  }
+
+  .membersWrap-3NUR2t:hover .members-3WRCEx .member-3-YXUe {
+    margin-left: 8px;
+  }
+
+  .membersWrap-3NUR2t:hover .membersGroup-2eiWxl {
+    transform: translateX(-6px);
+  }
+
+  .membersWrap-3NUR2t .membersGroup-v9BXpm {
+    cursor: default;
+    transform: translateX(45px);
+    transition: transform var(--hover-animation-speed);
+    overflow: visible;
+  }

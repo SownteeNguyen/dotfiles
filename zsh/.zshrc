@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.zsh/.oh-my-zsh"
+export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -106,13 +106,10 @@ export QT_IM_MODULE=ibus
 ibus-daemon -drx
 
 neofetch
-# Keyword
 
 alias nvide="neovide"
 alias ll="exa --header --long --icons --git"
-# alias lock="betterlockscreen -l blur"
 
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source ~/.zsh/catppuccin-zsh-syntax/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH=$PATH:/home/sowntee/.spicetify

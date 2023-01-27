@@ -179,10 +179,7 @@
     # define all lookup paths.
     enable_recursive_icon_lookup = true
 
-    # Set icon theme (only used for recursive icon lookup)
-    #icon_theme = Papirus
-    # You can also set multiple icon themes, with the leftmost one being used first.
-    icon_theme = "Adwaita, Papirus"
+    icon_theme = "Papirus-Dark"
 
     # Align icons left/right/top/off
     icon_position = left
@@ -236,17 +233,6 @@
     # parameter, an application may close the notification sent before the
     # user defined timeout.
     ignore_dbusclose = false
-
-
-    ### Wayland ###
-    # These settings are Wayland-specific. They have no effect when using X11
-
-    # Uncomment this if you want to let notications appear under fullscreen
-    # applications (default: overlay)
-    # layer = top
-
-    # Set this to true to use X11 output on Wayland.
-    force_xwayland = false
 
     ### Legacy ###
 

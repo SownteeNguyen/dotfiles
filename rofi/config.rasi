@@ -1,5 +1,5 @@
 configuration {
-    font: "JetbrainsMono Nerd Font Medium 10";
+    font: "Iosevka Nerd Font Bold 11";
 
     sidebar-mode: true;
     hide-scrollbar: true;
@@ -9,16 +9,16 @@ configuration {
     show-icons: true;
     icon-theme: "Papirus";
 
-    modi: "drun,window,run";
-    display-drun: " Applications";
-    display-window: "﩯 Window";
-    display-run: " Run";
-    drun-display-format: "{icon} {name}";
-    
-    drun {
-        parse-user: true;
-        parse-system: true;
-    }
+    /* modi: "drun,window,run"; */
+    /* display-drun: " Applications"; */
+    /* display-window: "﩯 Window"; */
+    /* display-run: " Run"; */
+    /* drun-display-format: "{icon} {name}"; */
+    /*  */
+    /* drun { */
+    /*     parse-user: true; */
+    /*     parse-system: true; */
+    /* } */
 
     kb-remove-to-eol: "Control+Shift+e";
     kb-accept-entry: "Return";
@@ -29,6 +29,5 @@ configuration {
     kb-row-left: "Control+h";
     kb-row-right: "Control+l";
 }
-
 
 @theme "theme/catppuccin-mocha"

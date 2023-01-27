@@ -4,9 +4,7 @@ if not status then
     return
 end
 require("nvim-treesitter.install").compilers = { "clang" }
--- configure treesitter
 treesitter.setup({
-    -- enable syntax highlighting
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
@@ -17,17 +15,16 @@ treesitter.setup({
         extended_mode = false,
         max_file_lines = nil,
     },
-    -- enable indentation
     indent = { enable = true },
     autotag = { enable = true },
     autopairs = { enable = true },
     ensure_installed = {
+        "html",
+        "css",
         "javascript",
         "typescript",
         "cpp",
         "c",
-        "html",
-        "css",
         "lua",
         -- Support Noice
         "vim",

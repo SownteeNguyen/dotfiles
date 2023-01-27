@@ -40,7 +40,7 @@ local config = {
         -- Disable sections and component separators
         component_separators = "",
         section_separators = "",
-        theme = "auto",
+        theme = "catppuccin",
         -- offsets = { { filetype = "neo-tree", padding = 0, highlight = "Directory", separator = false } },
         icons_enabled = true,
         disabled_filetypes = {

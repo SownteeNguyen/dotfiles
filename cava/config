@@ -16,7 +16,7 @@ autosens = 1
 # The number of bars (0-200). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
 bars = 0
-bar_width = 2
+bar_width = 1
 bar_spacing = 1
 # bar_height is only used for output in "noritake" format
 ; bar_height = 32
@@ -140,26 +140,6 @@ mono_option = average
 gradient = 1
 gradient_count = 8
 
-# # frappe
-# gradient_color_1 = '#81c8be'
-# gradient_color_2 = '#99d1db'
-# gradient_color_3 = '#85c1dc'
-# gradient_color_4 = '#8caaee'
-# gradient_color_5 = '#ca9ee6'
-# gradient_color_6 = '#f4b8e4'
-# gradient_color_7 = '#ea999c'
-# gradient_color_8 = '#e78284'
-#
-# # latte
-# gradient_color_1 = '#179299'
-# gradient_color_2 = '#04a5e5'
-# gradient_color_3 = '#209fb5'
-# gradient_color_4 = '#1e66f5'
-# gradient_color_5 = '#8839ef'
-# gradient_color_6 = '#ea76cb'
-# gradient_color_7 = '#e64553'
-# gradient_color_8 = '#d20f39'
-#
 # # macchiato
 # gradient_color_1 = '#8bd5ca'
 # gradient_color_2 = '#91d7e3'

@@ -30,4 +30,4 @@ configuration {
     kb-row-right: "Control+l";
 }
 
-@theme "theme/catppuccin-mocha"
+@theme "theme/powermenu"

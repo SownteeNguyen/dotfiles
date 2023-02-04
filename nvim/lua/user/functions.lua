@@ -11,21 +11,6 @@ au("TextYankPost", {
     end,
 })
 
-vim.api.nvim_create_autocmd("ColorSchemePre", {
-    pattern = "*",
-    callback = function()
-        print "I ran before loading Catppuccin!"
-    end
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "*",
-    callback = function()
-        local colors = require("catppuccin.palettes").get_palette()
-        -- do something with colors
-    end
-})
-
 vim.cmd([[
   function Test()
     %SnipRun

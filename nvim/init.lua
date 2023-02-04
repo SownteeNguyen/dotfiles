@@ -1,8 +1,7 @@
 -- SETUP BY Nguyen Thanh Son --
--- Github : SownteeNguyen
+-- Github : SownteeNguyen --
 
-pcall(require, 'impatient')
-
+require("plugins.impatient")
 require("user.keymaps")
 require("user.plugins")
 require("user.options")

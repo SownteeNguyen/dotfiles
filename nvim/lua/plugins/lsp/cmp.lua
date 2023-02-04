@@ -126,16 +126,16 @@ cmp.setup({
                 preset = "codicons", -- "default" | "codicons"
                 -- ellipsis_char = "...",
                 maxwidth = 30,
-                menu = {
-                    buffer = "[BUFFER]",
-                    path = "[PATH]",
-                    nvim_lsp = "[LSP]",
-                    nvim_lsp_signature_help = "[SIGN]",
-                    luasnip = "[SNIP]",
-                    nvim_lua = "[NVIM]",
-                    cmdline_history = "[HIST]",
-                    cmdline = "[CMD]",
-                },
+                -- menu = {
+                --     buffer = "[BUFFER]",
+                --     path = "[PATH]",
+                --     nvim_lsp = "[LSP]",
+                --     nvim_lsp_signature_help = "[SIGN]",
+                --     luasnip = "[SNIP]",
+                --     nvim_lua = "[NVIM]",
+                --     cmdline_history = "[HIST]",
+                --     cmdline = "[CMD]",
+                -- },
             })(entry, vim_item)
             local strings = vim.split(vim_item.kind, "%s+", { trimempty = true })
             kind.kind = " " .. string.format("%s %s     ", strings[1], strings[2]) .. " "

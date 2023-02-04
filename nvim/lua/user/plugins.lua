@@ -103,6 +103,7 @@ local plugins = {
         end,
     },
     ["nvim-lua/popup.nvim"] = {},
+    ["dharmx/telescope-media.nvim"] = {},
     ["nvim-telescope/telescope-media-files.nvim"] = {},
     ["nvim-telescope/telescope-fzf-native.nvim"] = {},
 
@@ -139,7 +140,7 @@ local plugins = {
         config = function()
             require("plugins.navic")
         end,
-        requires = { { "neovim/nvim-lspconfig" } },
+        requires = { "neovim/nvim-lspconfig" },
     },
 
     -- UI cmd, v.v
@@ -194,13 +195,6 @@ local plugins = {
         end,
     },
 
-    -- Highlight current line number with mode
-    ["melkster/modicator.nvim"] = {
-        config = function()
-            require("plugins.modicator")
-        end,
-    },
-
     -- Move to line when i find line :line
     ["nacro90/numb.nvim"] = {
         config = function()
@@ -242,9 +236,9 @@ local plugins = {
 
     -- Config for LSP Servers
     ["glepnir/lspsaga.nvim"] = {
-        -- config = function()
-        -- require("plugins.lsp.lspsaga")
-        -- end,
+        config = function()
+            require("plugins.lsp.lspsaga")
+        end,
     },
     ["onsails/lspkind.nvim"] = {},
     ["neovim/nvim-lspconfig"] = {
@@ -269,8 +263,7 @@ local fn = vim.fn
 
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1e222a" })
-    print("Welcome to SownteeNguyen's NeoVim")
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1e1e2e" })
     PACKER_BOOTSTRAP =
     fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
     vim.api.nvim_command("packadd packer.nvim")

@@ -1,10 +1,23 @@
+local client_id = {
+    default = "793271441293967371",
+    vs_code = "383226320970055681",
+    coc_nvim = "768090036633206815",
+}
+
+local log_levels = {
+    none = nil,
+    error = "error",
+    warn = "warn",
+    info = "info",
+    debug = "debug",
+}
+
 require("presence"):setup({
-    -- General options
     auto_update = true,
     neovim_image_text = "The Text Editor, Code From @SownteeNguyen",
     main_image = "neovim",
-    client_id = "793271441293967371",
-    log_level = nil,
+    client_id = client_id.default,
+    log_level = log_levels.none,
     debounce_timeout = 10,
     enable_line_number = false,
     blacklist = {},

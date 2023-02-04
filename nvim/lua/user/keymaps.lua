@@ -9,17 +9,9 @@
 
 M = {}
 
-local Remap = require("plugins.keymaps")
-local nnoremap = Remap.nnoremap
-local vnoremap = Remap.vnoremap
-local inoremap = Remap.inoremap
-local xnoremap = Remap.xnoremap
-local nmap = Remap.nmap
-
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -68,7 +60,6 @@ keymap("i", "<C-l>", "<Right>", opts)
 
 -- Chuyển Buffer
 keymap("n", "<TAB>", ":bnext<CR>", opts)
--- keymap("n", "<S-TAB>", ":bprevious<CR>", opts)
 
 -- Chia đôi màn
 keymap("n", "<leader>wv", "<C-w>v", opts)
@@ -96,15 +87,12 @@ keymap("n", "<Leader>sd", ":lua require('shade').toggle()<CR>", opts)
 keymap("n", "K", ":lua require('user.functions').show_documentation()<CR>", opts)
 
 -- Telescope
-keymap(
-    "n",
-    "<S-TAB>",
+keymap("n", "<S-TAB>",
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     opts
 )
 
 -- Copilot
--- vim.api.nvim_set_keymap("i", "<TAB>", ':copilot#Accept("<CR>")', opts)
 vim.cmd([[imap <silent><script><expr> <C-c> copilot#Accept("\<CR>")]])
 
 return M

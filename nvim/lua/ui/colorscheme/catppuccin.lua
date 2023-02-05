@@ -106,13 +106,14 @@ catppuccin.setup({
     custom_highlights = function(colors)
         return {
             Comment = { fg = colors.overlay1 },
-            LineNr = { fg = colors.lavender },
-            CursorLineNr = { fg = colors.lavender },
+            -- LineNr = { fg = colors.lavender },
+            -- CursorLineNr = { fg = colors.lavender },
             WinSeparator = { fg = colors.text },
-            TreesitterContext = { bg = colors.surface0 },
-            TreesitterContextLineNumber = { bg = colors.surface0, fg = colors.lavender },
+            -- TreesitterContext = { bg = colors.surface0 },
+            -- TreesitterContextLineNumber = { bg = colors.surface0, fg = colors.lavender },
             IndentBlanklineContextChar = { fg = colors.green },
             IndentBlanklineContextStart = { sp = colors.green },
+            CmpBorder = { fg = colors.lavender },
         }
     end,
 })

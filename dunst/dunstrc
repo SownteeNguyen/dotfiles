@@ -2,7 +2,7 @@
     width = (0, 600)
     height = 600
     origin = top-right
-    offset = 10x60
+    offset = 11x63
     scale = 0
     notification_limit = 0
 
@@ -20,14 +20,14 @@
     gap_size = 20
     text_icon_padding = 0
     frame_width = 2
-    corner_radius = 8
+    corner_radius = 10
     frame_color = "#89B4FA"
     separator_color = frame
     sort = yes
 
-    font = Iosevka Nerd Font Medium 11
+    font = Iosevka Nerd Font Bold 11
     word_wrap = yes
-    line_height = 1
+    line_height = 5
 
     markup = full
     # format ="<b>%a</b>\n%s\n%b"

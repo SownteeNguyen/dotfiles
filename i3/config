@@ -158,8 +158,8 @@ bindsym $mod+r mode "resize"
 
 for_window [class="^.*"] border pixel 0
  
-gaps inner 8
-gaps outer 0
+gaps inner 10
+gaps outer 2
  
 # gaps
 set $mode_gaps Gaps: (o)uter, (i)nner, (h)orizontal, (v)ertical, (t)op, (r)ight, (b)ottom, (l)eft
@@ -295,7 +295,7 @@ client.background        $base
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display Wallpaper
-exec_always feh --randomize --bg-fill ~/.config/wallpapers
+exec_always feh --bg-fill ~/.config/wallpapers/wall-01.webp
 
 exec_always xfce4-power-manager
 
@@ -303,7 +303,7 @@ exec_always xfce4-power-manager
 for_window [class="kitty"] move to workspace $ws1
 
 for_window [class="chrome"] move to workspace $ws2
-
+for_window [class="edge"] move to workspace $ws2
 # for_window [class="neovide"] move to workspace $ws3
 
 for_window [class="Code"] move to workspace $ws3

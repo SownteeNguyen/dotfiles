@@ -111,7 +111,7 @@ local indent = function()
 end
 
 local lsp_progess = function()
-    msg = msg or "NO LSP"
+    msg = msg or "✖"
     local buf_clients = vim.lsp.buf_get_clients()
     if next(buf_clients) == nil then
         if type(msg) == "boolean" or #msg == 0 then
@@ -178,7 +178,7 @@ local lsp_progess = function()
     local language_servers = "" .. table.concat(unique_client_names, ", ") .. ""
 
     if copilot_active then
-        language_servers = language_servers .. "%#SLCopilot#" .. "    Copilot "
+        language_servers = language_servers .. "%#SLCopilot#" .. "    "
     end
 
     return language_servers

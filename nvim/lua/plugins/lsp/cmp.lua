@@ -1,27 +1,3 @@
-vim.cmd("highlight! BorderBG guibg=NONE guifg=#FF00FF")
--- -- Scrollbar
--- vim.cmd [[highlight PmenuThumb guibg=#C5CDD9 guifg=NONE]]
-
--- -- Prompt Menu
--- vim.cmd [[highlight default link CmpPmenu NormalFloat]]
--- vim.cmd [[highlight CmpPmenu guibg=#1E1E2E guifg=#89B4FA]] -- completion menu background (guibg) and border (guifg)
--- vim.cmd [[highlight PmenuSel guibg=#6E738D guifg=NONE]]
-
--- -- Completion Items
--- vim.cmd [[highlight CmpItemMenu guibg=NONE guifg=#C6A0F6]]
--- vim.cmd [[highlight CmpItemAbbrDeprecated guibg=NONE guifg=#808080 gui=strikethrough]]
--- vim.cmd [[highlight CmpItemAbbrMatch guibg=NONE guifg=#569CD6]]
--- vim.cmd [[highlight CmpItemAbbrMatchFuzzy guibg=NONE guifg=#569CD6]]
--- vim.cmd [[highlight CmpItemKindVariable guibg=NONE guifg=#9CDCFE]]
--- vim.cmd [[highlight CmpItemKindInterface guibg=NONE guifg=#9CDCFE]]
--- vim.cmd [[highlight CmpItemKindText guibg=NONE guifg=#9CDCFE]]
--- vim.cmd [[highlight CmpItemKindFunction guibg=NONE guifg=#C586C0]]
--- vim.cmd [[highlight CmpItemKindMethod guibg=NONE guifg=#C586C0]]
--- vim.cmd [[highlight CmpItemKindKeyword guibg=NONE guifg=#D4D4D4]]
--- vim.cmd [[highlight CmpItemKindProperty guibg=NONE guifg=#D4D4D4]]
--- vim.cmd [[highlight CmpItemKindUnit guibg=NONE guifg=#D4D4D4]]
-vim.cmd [[highlight CmpItemKindSnippet guibg=NONE guifg=#Fb6180]]
-
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
     return

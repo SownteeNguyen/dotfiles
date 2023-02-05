@@ -53,7 +53,7 @@ capabilities.offsetEncoding = { "utf-16" }
 
 vim.diagnostic.config({
     virtual_text = {
-        prefix = " ● ",
+        prefix = "💔",
     },
     signs = true,
     underline = false,
@@ -90,7 +90,7 @@ protocol.CompletionItemKind = {
 }
 
 -- Change the Diagnostic symbols in the sign column (gutter)
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " ", Question = "" }
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " ", Question = " " }
 
 for type, icon in pairs(signs) do
     local hl = "DiagnosticSign" .. type
@@ -130,6 +130,16 @@ lspconfig.cssls.setup({
 })
 
 lspconfig.tsserver.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
+
+lspconfig.tailwindcss.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
+
+lspconfig.vuels.setup({
     on_attach = on_attach,
     capabilities = capabilities,
 })

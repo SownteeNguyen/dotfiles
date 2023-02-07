@@ -1,5 +1,5 @@
 @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
-@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css");
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css");
 .theme-dark { 
  /* Header Color  */
 --header-primary: var(--text-normal); 

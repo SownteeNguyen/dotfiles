@@ -15,7 +15,7 @@ local log_levels = {
 require("presence"):setup({
     auto_update = true,
     neovim_image_text = "The Text Editor, Code From @SownteeNguyen",
-    main_image = "neovim",
+    main_image = "file",
     client_id = client_id.default,
     log_level = log_levels.none,
     debounce_timeout = 10,

@@ -62,7 +62,6 @@ export base14='#2bfcfc'
 export base07='#d4d4d5'
 export base15='#ffffff'
 
-export MANPAGER='nvim +Man! +"set nocul" +"set noshowcmd" +"set noruler" +"set noshowmode" +"set laststatus=0" +"set showtabline=0" +"set nonumber"'
 if [ ! $(echo $MANPAGER | awk '{print $1}') = nvim ]; then
   export MANPAGER="less -s +M +Gg"
   export LESS="--RAW-CONTROL-CHARS"

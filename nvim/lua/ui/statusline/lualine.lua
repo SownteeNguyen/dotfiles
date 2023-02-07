@@ -121,7 +121,7 @@ local lsp_progess = function()
     end
     local buf_ft = vim.bo.filetype
     local buf_client_names = {}
-    local copilot_active = false
+    local copilot_active = true
     local null_ls = require("null-ls")
     local alternative_methods = {
         null_ls.methods.DIAGNOSTICS,
@@ -167,8 +167,8 @@ local lsp_progess = function()
     end
 
     -- formatters
-    local supported_formatters = formatters_list_registered(buf_ft)
-    vim.list_extend(buf_client_names, supported_formatters)
+    -- local supported_formatters = formatters_list_registered(buf_ft)
+    -- vim.list_extend(buf_client_names, supported_formatters)
 
     -- linters
     local supported_linters = list_registered(buf_ft)

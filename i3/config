@@ -338,7 +338,4 @@ bindsym Mod1+Shift+Tab workspace prev
 bindsym Print exec flameshot gui
 
 # Dunst
-# exec_always --no-startup-id ~/.config/dunst/scripts/volume.sh
-# exec_always --no-startup-id ~/.config/dunst/scripts/brightness.sh
-# exec_always --no-startup-id ~/.config/dunst/scripts/lowbattery.sh
 exec_always --no-startup-id ~/.config/dunst/scripts/welcome.sh

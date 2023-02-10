@@ -1,6 +1,5 @@
 ZINIT_HOME="$HOME/.local/share/zsh/zinit"
 if [ ! -d "$ZINIT_HOME" ]; then
-  echo "ZINIT not found. Cloning..."
   git clone --depth 1 https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
@@ -10,8 +9,8 @@ alias snip='zinit snippet'
 alias ice='zinit ice'
 alias load='zinit load'
 
-# ice depth"1"
-# use zsh-users/zsh-completions
+ice depth"1"
+use zsh-users/zsh-completions
 
 autoload compinit
 compinit

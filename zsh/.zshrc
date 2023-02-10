@@ -20,6 +20,8 @@ greet_path="$HOME/.bin/eyecandy/$greet"
 [ -f "$greet_path" ] && eval "$greet_path" ||default_greeter
 unset greet_path greet
 
+rxfetch
+
 export GTK_IM_MODULE=ibus: warning
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus

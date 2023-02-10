@@ -32,21 +32,13 @@ exec --no-startup-id dex --autostart --environment i3
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# Start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# Kill focused window
 bindsym $mod+Shift+q kill
-
-# Start Rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme "$HOME/.config/rofi/theme/launcher.rasi"
 
 # change focus
 bindsym $mod+h focus left
@@ -307,11 +299,13 @@ for_window [class="edge"] move to workspace $ws2
 # for_window [class="neovide"] move to workspace $ws3
 
 for_window [class="Code"] move to workspace $ws3
-for_window [class="intellij-idea-ultimate-edition"] move to workspace $ws4
+
+for_window [class="jetbrains-idea"] move to workspace $ws4
 for_window [class="webstorm"] move to workspace $ws4
 
 for_window [class="discord"] move to workspace $ws5
 for_window [class="Telegram"] move to workspace $ws5
+
 for_window [class="Spotify"] move to workspace $ws6
 
 for_window [class="obs"] move to workspace $ws7
@@ -325,10 +319,8 @@ exec_always picom -f
 # set desktop background with custom effect
 exec --no-startup-id betterlockscreen -w dim
 
-# Sleep
-# exec_always xautolock -detectsleep -notify 60 -notifier "xset dpms force off" -time 20 -locker "systemctl suspend && betterlockscreen -l dimblur" &
-
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+# Start Rofi
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme "$HOME/.config/rofi/theme/launcher.rasi"
 
 # Move tab
 bindsym Mod1+Tab workspace next
@@ -339,3 +331,14 @@ bindsym Print exec flameshot gui
 
 # Dunst
 exec_always --no-startup-id ~/.config/dunst/scripts/welcome.sh
+
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send Volume $(pamixer --get-volume) -h string:x-canonical-private-synchronous:volume_percentage --app-name System && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send Volume $(pamixer --get-volume) -h string:x-canonical-private-synchronous:volume_percentage --app-name System && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send Volume Mute -h string:x-canonical-private-synchronous:brightness_percentage --app-name System && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Brightness
+bindsym XF86MonBrightnessUp exec brightnessctl s +10% > /dev/null && notify-send Brightness $(($(brightnessctl get) * 10 / 937 * 10))% -h string:x-canonical-private-synchronous:brightness_percentage --app-name System
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%- > /dev/null && notify-send Brightness $(($(brightnessctl get) * 10 / 937 * 10))% -h string:x-canonical-private-synchronous:brightness_percentage --app-name System

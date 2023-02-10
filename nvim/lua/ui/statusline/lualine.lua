@@ -156,8 +156,8 @@ local lsp_progess = function()
     function list_registered(filetype)
         local registered_providers = list_registered_providers_names(filetype)
         local providers_for_methods = vim.tbl_flatten(vim.tbl_map(function(m)
-            return registered_providers[m] or {}
-        end, alternative_methods))
+                return registered_providers[m] or {}
+            end, alternative_methods))
         return providers_for_methods
     end
 

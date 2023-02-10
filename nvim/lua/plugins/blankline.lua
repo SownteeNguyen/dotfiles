@@ -10,7 +10,7 @@ vim.opt.list = true
 vim.opt.listchars = "lead:·,trail:·,nbsp:◇,tab:··,extends:▸,precedes:◂"
 
 require("indent_blankline").setup({
-    char = "▍",
+    -- char = "|",
     indentLine_enabled = 1,
     buftype_exclude = { "terminal" },
     show_trailing_blankline_indent = true,
@@ -21,6 +21,8 @@ require("indent_blankline").setup({
     space_char_blankline = " ",
     enabled = true,
     use_treesitter = true,
+    indent_level = 4,
+    max_indent_increase = 1,
     filetype_exclude = {
         "help",
         "terminal",

@@ -1,5 +1,6 @@
 <div align="center">
-    <h1>Arch Linux - Catppuccin Mocha Mauve by SownteeNguyen</h1>
+    <h1>Arch Linux - Catppuccin Mocha Mauve</h1>
+    <h1>by Nguyen Thanh Son | @SownteeNguyen</h1>
 </div>
 
 <div align="center">
@@ -19,7 +20,7 @@
 
 ### Details
 
- <img alt="Sowntee" height="360px" Width="280px" src="neofetch/ascii/cat.png" align="right">
+ <img alt="Sowntee" height="300px" Width="300px" src="neofetch/ascii/cat.png" align="right">
 
 - **Window Manager**: I3
 - **Window Manager Theme**: Catppuccin Mocha Mauve

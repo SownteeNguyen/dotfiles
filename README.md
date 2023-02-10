@@ -15,7 +15,7 @@
 
 ## More Screenshots
 
-<img src="Screenshots/workspace1">
+<img src="Screenshots/workspace1.png">
 
 ### Details
 

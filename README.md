@@ -183,9 +183,9 @@
     
     timedatectl set-timezone Asia/Ho_Chi_Minh
 
-### Reflector
+### Reflector and Keyring
     
-    pacman -Sy reflector
+    pacman -Sy reflector archlinux-keyring
     
     reflector -c Vietnam -c Singapore -c Japan -c India -a 12 --sort rate --save /etc/pacman.d/mirrorlist
     

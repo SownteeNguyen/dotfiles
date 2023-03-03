@@ -29,5 +29,3 @@ configuration {
     kb-row-left: "Control+h";
     kb-row-right: "Control+l";
 }
-
-@theme "theme/powermenu"

@@ -1,4 +1,5 @@
 local status_ok, which_key = pcall(require, "which-key")
+
 if not status_ok then
     return
 end
@@ -35,7 +36,7 @@ local setup = {
     },
     icons = {
         breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-        separator = "➜", -- symbol used between a key and it's label
+        separator = "➜ ", -- symbol used between a key and it's label
         group = "+", -- symbol prepended to a group
     },
     popup_mappings = {
@@ -89,7 +90,6 @@ local m_opts = {
 
 local mappings = {
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment" },
-
     p = {
         name = "Packer",
         C = { "<cmd>PackerClean<cr>", "Clean" },
@@ -99,14 +99,12 @@ local mappings = {
         S = { "<cmd>PackerStatus<cr>", "Status" },
         u = { "<cmd>PackerUpdate<cr>", "Update" },
     },
-
     o = {
         name = "Options",
         w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
         s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
         t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
     },
-
     w = {
         name = "Window",
         v = { "<C-w>v", "Vertical Split" },
@@ -114,14 +112,6 @@ local mappings = {
         e = { "<C-w>=", "Make Splits Equal" },
         q = { ":close<CR>", "Close Split" },
     },
-
-    r = {
-        name = "Replace",
-        r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
-        w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
-        f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
-    },
-
     d = {
         name = "Debug",
         b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
@@ -134,7 +124,6 @@ local mappings = {
         u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
         x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
     },
-
     f = {
         name = "Find",
         c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
@@ -152,7 +141,6 @@ local mappings = {
         R = { "<cmd>Telescope registers<cr>", "Registers" },
         C = { "<cmd>Telescope commands<cr>", "Commands" },
     },
-
     g = {
         name = "Git",
         g = { "<cmd>lua LazyGit()<CR>", "Lazygit" },
@@ -162,54 +150,34 @@ local mappings = {
         r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
         R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
         s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-        u = {
-            "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-            "Undo Stage Hunk",
-        },
+        u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
         o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-        d = {
-            "<cmd>Gitsigns diffthis HEAD<cr>",
-            "Diff",
-        },
+        d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
     },
-
     l = {
         name = "LSP",
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
         d = { "<cmd>TroubleToggle<cr>", "Diagnostics" },
-        w = {
-            "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-            "Workspace Diagnostics",
-        },
+        w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
         f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
         F = { "<cmd>LspToggleAutoFormat<cr>", "Toggle Autoformat" },
         i = { "<cmd>LspInfo<cr>", "Info" },
         h = { "<cmd>IlluminationToggle<cr>", "Toggle Doc HL" },
         I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-        j = {
-            "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>",
-            "Next Diagnostic",
-        },
-        k = {
-            "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>",
-            "Prev Diagnostic",
-        },
+        j = { "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>", "Next Diagnostic" },
+        k = { "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", "Prev Diagnostic" },
         l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-        o = { "<cmd>SymbolsOutline<cr>", "Outline" },
+        o = { "<cmd>Lspsaga outline<cr>", "Outline" },
         q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
         R = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
         s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-        S = {
-            "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-            "Workspace Symbols",
-        },
+        S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" },
         t = { '<cmd>lua require("user.functions").toggle_diagnostics()<cr>', "Toggle Diagnostics" },
         u = { "<cmd>LuaSnipUnlinkCurrent<cr>", "Unlink Snippet" },
     },
-
     S = {
         name = "SnipRun",
         c = { "<cmd>SnipClose<cr>", "Close" },
@@ -220,18 +188,16 @@ local mappings = {
         t = { "<cmd>SnipRunToggle<cr>", "Toggle" },
         x = { "<cmd>SnipTerminate<cr>", "Terminate" },
     },
-
     t = {
         name = "Terminal",
         ["1"] = { ":1ToggleTerm<cr>", "1" },
         ["2"] = { ":2ToggleTerm<cr>", "2" },
         ["3"] = { ":3ToggleTerm<cr>", "3" },
         ["4"] = { ":4ToggleTerm<cr>", "4" },
-        -- f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+        f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
         h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-        v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+        v = { "<cmd>ToggleTerm size=50 direction=vertical<cr>", "Vertical" },
     },
-
     T = {
         name = "Treesitter",
         h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
@@ -249,7 +215,6 @@ local vopts = {
 }
 local vmappings = {
     ["/"] = { "<Plug>(comment_toggle_linewise_visual)", "Comment toggle linewise (visual)" },
-    s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
 }
 
 which_key.setup(setup)

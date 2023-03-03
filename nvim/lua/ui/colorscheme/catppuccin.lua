@@ -60,12 +60,12 @@ catppuccin.setup({
                 warnings = { "bold", "italic" },
                 information = { "bold", "italic" },
             },
-            -- underlines = {
-            --     errors = { "underline" },
-            --     hints = { "underline" },
-            --     warnings = { "underline" },
-            --     information = { "underline" },
-            -- },
+            underlines = {
+                errors = { "underline" },
+                hints = { "underline" },
+                warnings = { "underline" },
+                information = { "underline" },
+            },
         },
         navic = {
             enabled = true,
@@ -108,7 +108,7 @@ catppuccin.setup({
             Comment = { fg = colors.overlay1 },
             -- LineNr = { fg = colors.lavender },
             -- CursorLineNr = { fg = colors.lavender },
-            WinSeparator = { fg = colors.text },
+            WinSeparator = { fg = colors.base },
             -- TreesitterContext = { bg = colors.surface0 },
             -- TreesitterContextLineNumber = { bg = colors.surface0, fg = colors.lavender },
             IndentBlanklineContextChar = { fg = colors.green },
@@ -118,4 +118,4 @@ catppuccin.setup({
     end,
 })
 
-vim.cmd([[colorscheme catppuccin]])
+vim.cmd("colorscheme catppuccin")

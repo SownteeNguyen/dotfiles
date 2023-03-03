@@ -5,7 +5,6 @@
     offset = 11x63
     scale = 0
     notification_limit = 0
-    hide_timeout = 3
 
     progress_bar = false
     progress_bar_height = 20
@@ -15,10 +14,10 @@
 
     indicate_hidden = yes
     transparency = 0
-    separator_height = 2
+    separator_height = 0
     padding = 10
     horizontal_padding = 10
-    gap_size = 20
+    gap_size = 0
     text_icon_padding = 0
     frame_width = 2
     corner_radius = 10
@@ -28,7 +27,7 @@
 
     font = Iosevka Nerd Font Medium 11
     word_wrap = yes
-    line_height = 5
+    line_height = 1
 
     markup = full
     # format ="<b>%a</b>\n%s\n%b"

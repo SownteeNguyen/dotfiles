@@ -12,14 +12,14 @@ nvimtree.setup({
     hijack_netrw = false,
     hijack_unnamed_buffer_when_opening = false,
     ignore_buffer_on_setup = false,
-    open_on_setup = true,
-    open_on_setup_file = true,
-    open_on_tab = true,
+    -- ignore_ft_on_setup = { "alpha" },
+    open_on_setup = false,
+    open_on_setup_file = false,
+    open_on_tab = false,
     sort_by = "name",
     update_cwd = false,
     reload_on_bufenter = true,
     respect_buf_cwd = false,
-    ignore_ft_on_setup = { "alpha" },
     view = {
         adaptive_size = false,
         centralize_selection = false,
@@ -33,7 +33,6 @@ nvimtree.setup({
         mappings = {
             custom_only = false,
             list = {
-                -- user mappings go here
             },
         },
         float = {

@@ -1,7 +1,6 @@
 local plugins = {
     -- Plugin manager
     ["wbthomason/packer.nvim"] = {},
-
     -- Coloscheme
     ["catppuccin/nvim"] = {
         as = "catppuccin",
@@ -14,24 +13,31 @@ local plugins = {
             require("ui.colorscheme.tokyonight")
         end,
     },
-
+    ["sainnhe/everforest"] = {
+        config = function()
+            require("ui.colorscheme.everforest")
+        end
+    },
+    ["decaycs/decay.nvim"] = {
+        as = "decay",
+        config = function ()
+            require("ui.colorscheme.decay")
+        end
+    },
     -- File explorer
     ["nvim-tree/nvim-tree.lua"] = {
         cmd = "NvimTreeToggle",
         requires = { "nvim-tree/nvim-web-devicons" },
-        tag = "nightly",
         config = function()
             require("plugins.nvimtree")
         end,
     },
-
     -- Icons
     ["kyazdani42/nvim-web-devicons"] = {
         config = function()
             require("plugins.nvim-webdev-icons")
         end,
     },
-
     -- Tabs
     ["akinsho/bufferline.nvim"] = {
         tag = "v3.*",
@@ -42,7 +48,6 @@ local plugins = {
         end,
     },
     ["moll/vim-bbye"] = {},
-
     -- Statusline
     ["nvim-lualine/lualine.nvim"] = {
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
@@ -50,7 +55,6 @@ local plugins = {
             require("ui.statusline.lualine")
         end,
     },
-
     -- Treesitter
     ["nvim-treesitter/nvim-treesitter"] = {
         config = function()
@@ -59,7 +63,6 @@ local plugins = {
     },
     ["p00f/nvim-ts-rainbow"] = {},
     ["nvim-treesitter/playground"] = {},
-
     -- Auto closing
     ["windwp/nvim-autopairs"] = {
         config = function()
@@ -67,35 +70,30 @@ local plugins = {
         end,
     },
     ["windwp/nvim-ts-autotag"] = {},
-
     -- Surround words with: "({[
     ["kylechui/nvim-surround"] = {
         config = function()
-            require("plugins.surround")
+            require("nvim-surround").setup()
         end,
     },
-
     -- Indent Blankline
     ["lukas-reineke/indent-blankline.nvim"] = {
         config = function()
             require("plugins.blankline")
         end,
     },
-
     -- Whichkey
     ["folke/which-key.nvim"] = {
         config = function()
             require("plugins.whichkey")
         end,
     },
-
     -- Comment
     ["numToStr/Comment.nvim"] = {
         config = function()
             require("Comment").setup()
         end,
     },
-
     -- Telescope, Fzfinder
     ["nvim-telescope/telescope.nvim"] = {
         config = function()
@@ -106,35 +104,38 @@ local plugins = {
     ["dharmx/telescope-media.nvim"] = {},
     ["nvim-telescope/telescope-media-files.nvim"] = {},
     ["nvim-telescope/telescope-fzf-native.nvim"] = {},
-
-    -- -- Dashboard
-    -- ["goolord/alpha-nvim"] = {
-    --     config = function()
-    --         require("plugins.alpha")
-    --     end,
-    -- },
-
+    -- Dashboard
+    ["goolord/alpha-nvim"] = {
+        disable = false,
+        config = function()
+            require("plugins.alpha")
+        end,
+    },
+    -- Support README.md
+    ["iamcco/markdown-preview.nvim"] = {
+        ft = "markdown",
+        run = function()
+            vim.fn["mkdp#util#install"]()
+        end,
+    },
     -- Git
     ["lewis6991/gitsigns.nvim"] = {
         config = function()
             require("plugins.gitsigns")
         end,
     },
-
     -- Color
     ["NvChad/nvim-colorizer.lua"] = {
         config = function()
             require("plugins.colorize")
         end,
     },
-
     -- UI
     ["stevearc/dressing.nvim"] = {
         config = function()
             require("plugins.dressing")
         end,
     },
-
     -- Show winbar lsp
     ["SmiteshP/nvim-navic"] = {
         config = function()
@@ -142,7 +143,6 @@ local plugins = {
         end,
         requires = { "neovim/nvim-lspconfig" },
     },
-
     -- UI cmd, v.v
     ["folke/noice.nvim"] = {
         after = "nvim-cmp",
@@ -150,28 +150,24 @@ local plugins = {
             require("plugins.noice")
         end,
     },
-
     -- Notification
     ["rcarriga/nvim-notify"] = {
         config = function()
             require("plugins.notify")
         end,
     },
-
     -- Terminal
     ["akinsho/toggleterm.nvim"] = {
         config = function()
             require("plugins.toggle-term")
         end,
     },
-
     -- Discord Show
     ["andweeb/presence.nvim"] = {
         config = function()
             require("plugins.presence")
         end,
     },
-
     -- Focus Tab
     ["andreadev-it/shade.nvim"] = {
         module = "shade",
@@ -179,7 +175,6 @@ local plugins = {
             require("plugins.shade")
         end,
     },
-
     -- Pick Color
     ["max397574/colortils.nvim"] = {
         cmd = "Colortils",
@@ -187,26 +182,22 @@ local plugins = {
             require("plugins.colortils")
         end,
     },
-
     -- Auto highlight same systax
     ["RRethy/vim-illuminate"] = {
         config = function()
             require("plugins.illuminate")
         end,
     },
-
     -- Move to line when i find line :line
     ["nacro90/numb.nvim"] = {
         config = function()
             require("plugins.numb")
         end,
     },
-
     -- Impatient optimize the startup time
     ["lewis6991/impatient.nvim"] = {},
     ["nvim-lua/plenary.nvim"] = {},
     ["MunifTanjim/nui.nvim"] = {},
-
     ----------------------------------------------------------------------------
     -- Auto completions
     ["hrsh7th/cmp-buffer"] = {}, -- buffer completions
@@ -220,12 +211,10 @@ local plugins = {
         end,
     },
     ["github/copilot.vim"] = {},
-
     -- Shippets
     ["L3MON4D3/LuaSnip"] = {},
     ["saadparwaiz1/cmp_luasnip"] = {},
     ["rafamadriz/friendly-snippets"] = {},
-
     -- Manage and Install LSP servers
     ["williamboman/mason-lspconfig"] = {},
     ["williamboman/mason.nvim"] = {
@@ -233,7 +222,6 @@ local plugins = {
             require("plugins.lsp.mason")
         end,
     },
-
     -- Config for LSP Servers
     ["glepnir/lspsaga.nvim"] = {
         config = function()
@@ -246,7 +234,6 @@ local plugins = {
             require("plugins.lsp.lspconfig")
         end,
     },
-
     -- Formatting
     ["jayp0521/mason-null-ls.nvim"] = {},
     ["jose-elias-alvarez/null-ls.nvim"] = {
@@ -265,7 +252,7 @@ local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1e1e2e" })
     PACKER_BOOTSTRAP =
-    fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+        fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
     vim.api.nvim_command("packadd packer.nvim")
 end
 

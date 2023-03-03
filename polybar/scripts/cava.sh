@@ -1,4 +1,5 @@
 #! /bin/bash
+volume=$(pactl list sinks | grep 'Volume: f' | awk '{print $5}' | sed 's/%//')
 
 bar="▁▂▃▄▅▆▇█"
 dict="s/;//g;"

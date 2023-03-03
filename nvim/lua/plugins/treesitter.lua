@@ -1,9 +1,11 @@
--- import nvim-treesitter plugin safely
 local status, treesitter = pcall(require, "nvim-treesitter.configs")
+
 if not status then
     return
 end
+
 require("nvim-treesitter.install").compilers = { "clang" }
+
 treesitter.setup({
     highlight = {
         enable = true,

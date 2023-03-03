@@ -53,7 +53,7 @@ args = parser.parse_args()
 def fix_string(string):
     # corrects encoding for the python version used
     if sys.version_info.major == 3:
-        return '  ' + string
+        return ' [ ' + string + ' ]'
     else:
         return string.encode('utf-8')
 
@@ -61,7 +61,7 @@ def fix_string(string):
 def truncate(name, trunclen):
     if len(name) > trunclen:
         name = name[:trunclen]
-        name += '...'
+        name += '...]'
         if ('(' in name) and (')' not in name):
             name += ')'
     return name
@@ -144,6 +144,6 @@ try:
 
 except Exception as e:
     if isinstance(e, dbus.exceptions.DBusException):
-        print("󰝛  Let's play something")
+        print("󰝛 [ Let's play something ]")
     else:
         print(e)

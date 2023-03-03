@@ -83,9 +83,6 @@ keymap("n", "<Leader>cg", ":Colortils gradient<cr>", opts)
 -- Shade
 keymap("n", "<Leader>sd", ":lua require('shade').toggle()<CR>", opts)
 
--- Open Documentation LSP
-keymap("n", "K", ":lua require('user.functions').show_documentation()<CR>", opts)
-
 -- Telescope
 keymap("n", "<S-TAB>",
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",

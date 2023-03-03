@@ -13,10 +13,12 @@ toggleterm.setup({
     shading_factor = 2,
     start_in_insert = true,
     insert_mappings = true,
+    persist_mode = true,
     persist_size = true,
     direction = "float",
     close_on_exit = true,
     shell = vim.o.shell,
+    auto_scroll = true,
     highlights = {
         -- Normal = {
         --     guibg = ""
@@ -32,6 +34,12 @@ toggleterm.setup({
     float_opts = {
         border = 'curved',
         winblend = 3,
+    },
+    winbar = {
+        enabled = false,
+        name_formatter = function(term)
+            return term.name
+        end
     },
 })
 

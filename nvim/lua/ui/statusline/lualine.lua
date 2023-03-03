@@ -64,7 +64,7 @@ local location = {
 
 local mode_custom = {
     function()
-        return " SownteeNguyen"
+        return "  "
     end,
     color = function()
         local mode_color = {
@@ -96,7 +96,7 @@ local mode_custom = {
 
 local custom_icons = {
     function()
-        return " SownteeNguyen"
+        return "  "
     end,
     separator = { left = "", right = "" },
 }
@@ -156,8 +156,8 @@ local lsp_progess = function()
     function list_registered(filetype)
         local registered_providers = list_registered_providers_names(filetype)
         local providers_for_methods = vim.tbl_flatten(vim.tbl_map(function(m)
-                return registered_providers[m] or {}
-            end, alternative_methods))
+            return registered_providers[m] or {}
+        end, alternative_methods))
         return providers_for_methods
     end
 
@@ -188,10 +188,10 @@ lualine.setup({
     options = {
         globalstatus = true,
         icons_enabled = true,
-        theme = "catppuccin",
+        theme = 'auto',
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
-        disabled_filetypes = { "alpha", 'packer', 'NvimTree', 'toggleterm' },
+        disabled_filetypes = { "alpha", 'packer', 'NvimTree', 'toggleterm', 'telescope' },
         always_divide_middle = true,
     },
     sections = {

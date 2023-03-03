@@ -3,6 +3,7 @@ vim.cmd([[highlight GitSignsChange guifg=#ff7f00 gui=nocombine]])
 vim.cmd([[highlight GitSignsDelete guifg=#ff0000 gui=nocombine]])
 
 local status_ok, gitsigns = pcall(require, "gitsigns")
+
 if not status_ok then
     return
 end
@@ -32,7 +33,7 @@ gitsigns.setup({
         delay = 200,
         ignore_whitespace = false,
     },
-    current_line_blame_formatter = "   <author>  <author_time:%h %d, %Y> ✦  <author_time:%X>  <summary>",
+    current_line_blame_formatter = "   <author>  <author_time:%h %d, %Y> ✦  <author_time:%X>   <summary>",
     sign_priority = 6,
     update_debounce = 100,
     status_formatter = nil,

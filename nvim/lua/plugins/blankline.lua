@@ -17,7 +17,7 @@ require("indent_blankline").setup({
     show_first_indent_level = true,
     show_current_context = true,
     show_current_context_start = true,
-    context_char = "▍",
+    -- context_char = "▍",
     space_char_blankline = " ",
     enabled = true,
     use_treesitter = true,

@@ -27,8 +27,8 @@ tokyonight.setup({
         colors.info = "#5fcf63"
         colors.warn = "#d9db60"
     end,
-
-    on_highlights = function(highlights, colors) end,
+    on_highlights = function(highlights, colors)
+    end,
 })
 
 -- vim.cmd("colorscheme tokyonight")

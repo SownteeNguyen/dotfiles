@@ -185,8 +185,6 @@
 
 ### Time sync and set keyboard
 
-    timedatectl set-ntp true
-
     ls /i386/qwerty/us.map.gz
 
     timedatectl set-ntp true
